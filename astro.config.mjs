@@ -11,16 +11,13 @@ export default defineConfig({
 	site: siteUrl,
 	output: 'static',
 	adapter: cloudflare(),
-	prefetch: {
-		prefetchAll: true,
-		defaultStrategy: 'hover',
-	},
-	experimental: {
-		clientPrerender: true,
-	},
 	integrations: [
 		starlight({
 			title: siteConfig.title,
+			defaultLocale: 'root',
+			locales: {
+				root: { label: '한국어', lang: 'ko-KR' }
+			},
 			customCss: ['./src/styles/custom.css'],
 			social: [
 				{
@@ -30,9 +27,8 @@ export default defineConfig({
 				},
 			],
 			sidebar: [
-				{ label: '개요', autogenerate: { directory: 'overview' } },
-				{ label: '핵심 기술', autogenerate: { directory: 'core-technologies' } },
-				{ label: '미래 전망', autogenerate: { directory: 'future-outlook' } },
+				{ label: '세계관 및 기본 설정', autogenerate: { directory: 'world-setting' } },
+				{ label: '주요 인물 및 가문 분석', autogenerate: { directory: 'characters-and-clans' } },
 			],
 		}),
 	],

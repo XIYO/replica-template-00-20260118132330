@@ -1,10 +1,5 @@
 :root {
-  --sl-color-accent-low: #ec489915;
-  --sl-color-accent: #ec4899;
-  --sl-color-accent-high: #f9a8d4;
-}
-
-/* 사이드바 선택 항목 텍스트 가독성 개선 */
-[aria-current="page"] {
-  color: var(--sl-color-white) !important;
+  --sl-color-accent-low: #3b82f633;
+  --sl-color-accent: #3b82f6;
+  --sl-color-accent-high: #3b82f6dd;
 }

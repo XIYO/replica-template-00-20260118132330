@@ -1,8 +1,9 @@
 {
-  "subdomain": "replica-template-00",
-  "title": "AI Agent의 전망과 미래",
-  "description": "AI 에이전트의 핵심 기술, 활용 분야, 그리고 미래 전망을 심층적으로 분석합니다.",
-  "siteType": "ai-docs",
-  "accentColor": "#6366f1",
-  "githubRepo": "xiyo/replica-template-00"
+  "template": "replica-template-00",
+  "accentColor": "#3b82f6",
+  "locale": "ko",
+  "title": "나루토 가이드",
+  "topic": "나루토",
+  "subdomain": "site-mkjrntmd-p9ly",
+  "githubRepo": "xiyo/replica-template-00-20260118132330"
 }
