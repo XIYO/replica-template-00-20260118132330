@@ -1,0 +1,65 @@
+---
+# Replica Template 설정 스키마
+# Builder가 이 파일을 읽어서 동적으로 폼을 생성합니다.
+
+# 템플릿 메타데이터
+template:
+  name: replica-template-00
+  framework: starlight
+  description: Starlight 기반 문서 사이트 템플릿
+  preview: https://replica-template-00.xiyo.dev
+  version: 1.0.0
+  repository: XIYO/replica-template-00
+  docsDir: src/content/docs/
+  configFile: astro.config.mjs
+
+# 설정 가능한 필드 정의
+fields:
+  - name: title
+    type: text
+    label: 사이트 제목
+    description: 브라우저 탭과 헤더에 표시됩니다
+    required: true
+    placeholder: My Documentation
+
+  - name: description
+    type: textarea
+    label: 사이트 설명
+    description: SEO 메타 태그에 사용됩니다
+    required: false
+    placeholder: 프로젝트에 대한 간단한 설명
+
+  - name: topic
+    type: textarea
+    label: 문서 주제
+    description: AI가 초기 문서를 생성할 때 참고합니다
+    required: true
+    placeholder: "예: React 학습 가이드, API 레퍼런스, 제품 사용 매뉴얼"
+
+  - name: accentColor
+    type: color
+    label: 테마 색상
+    description: 링크, 버튼 등 강조 색상
+    default: "#3b82f6"
+
+  - name: subdomain
+    type: text
+    label: 서브도메인
+    description: "사이트 주소: {subdomain}.xiyo.dev"
+    required: false
+    placeholder: my-docs
+    validation:
+      pattern: "^[a-z0-9-]+$"
+      message: 소문자, 숫자, 하이픈만 사용 가능
+
+  - name: locale
+    type: select
+    label: 기본 언어
+    default: ko
+    options:
+      - value: ko
+        label: 한국어
+      - value: en
+        label: English
+      - value: ja
+        label: 日本語
